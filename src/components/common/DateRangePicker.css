@@ -1,0 +1,108 @@
+.date-range-picker {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 20px;
+}
+
+.preset-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.preset-btn {
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #374151;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.preset-btn:hover {
+  background: #f9fafb;
+  border-color: #1a5e3a;
+}
+
+.preset-btn.active {
+  background: #1a5e3a;
+  color: white;
+  border-color: #1a5e3a;
+}
+
+.custom-dates {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.date-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.date-inputs input[type="date"] {
+  padding: 6px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #1f2937;
+  background: white;
+}
+
+.date-inputs input[type="date"]:focus {
+  outline: none;
+  border-color: #1a5e3a;
+  box-shadow: 0 0 0 3px rgba(26, 94, 58, 0.1);
+}
+
+.date-separator {
+  font-size: 12px;
+  color: #1f2937;
+  margin: 0 4px;
+  font-weight: 500;
+}
+
+.clear-btn {
+  padding: 4px 8px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.clear-btn:hover {
+  background: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .preset-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+  
+  .custom-dates {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .date-inputs {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .date-separator {
+    text-align: center;
+  }
+}
