@@ -1,7 +1,9 @@
 import React from 'react'
+import { useAuth } from '../contexts/AuthContext'
 import './Sidebar.css'
 
 const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobileMenuOpen }) => {
+  const { user, signOut } = useAuth()
   const menuItems = [
     { id: 'dashboard', label: 'Dashboard Utama', icon: '📊' },
     { id: 'registration', label: 'Pendaftaran', icon: '📝' },
@@ -43,10 +45,14 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
         <div className="user-info">
           <div className="user-avatar">👤</div>
           <div className="user-details">
-            <p className="user-name">Admin Pemerintah</p>
-            <p className="user-role">Kementerian Pertanian</p>
+            <p className="user-name">{user?.name || 'Admin Pemerintah'}</p>
+            <p className="user-role">{user?.department || 'Kementerian Pertanian'}</p>
           </div>
         </div>
+        <button className="logout-btn" onClick={signOut} title="Keluar">
+          <span className="logout-icon">🚪</span>
+          <span className="logout-text">Keluar</span>
+        </button>
       </div>
     </aside>
   )

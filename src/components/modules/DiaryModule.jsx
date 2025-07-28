@@ -385,7 +385,7 @@ const DiaryModule = () => {
                 <div className="alert-item warning">
                   <span className="alert-icon">⚠️</span>
                   <div className="alert-content">
-                    <span className="alert-title">12 petani tidak input >3 hari</span>
+                    <span className="alert-title">12 petani tidak input &gt;3 hari</span>
                     <span className="alert-time">Jawa Barat region</span>
                   </div>
                 </div>

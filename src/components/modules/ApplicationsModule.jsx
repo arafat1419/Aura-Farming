@@ -243,7 +243,7 @@ const ApplicationsModule = () => {
                   <div className="info-icon">💰</div>
                   <div className="info-content">
                     <h5>Kompensasi</h5>
-                    <p>Rp 6 juta per hektar untuk kerusakan >75%</p>
+                    <p>Rp 6 juta per hektar untuk kerusakan &gt;75%</p>
                   </div>
                 </div>
                 <div className="info-card">
